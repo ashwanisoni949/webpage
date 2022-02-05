@@ -1,0 +1,105 @@
+html,body
+{
+    height: 100%;
+}
+body{
+    background-color: #1b1e23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.clock
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+/* groupintg selectors */
+.clock_second,
+.clock_mintue,
+.clock_hour,
+.clock_indicator{
+    position: absolute;
+    left: calc(50% -1px);
+    background-color: #f4eed7;
+    width: 6px;
+    transform-origin: bottom center;
+    z-index: 2;
+    border-radius: 1px;
+}
+.clock_second{
+    height: 90px;
+    width: 3px;
+    background-color: red;
+    margin-top: 10px;
+    z-index: 3;
+    animation:time 60s infinite step(60)
+}
+.clock_mintue
+{
+    height:80px;
+    width: 4px;
+    background-color: aqua;
+    margin-top: 20px;
+    opacity: 75;
+    z-index: 2;
+    animation: time 3600s linear li;
+}
+.clock_hour
+{
+    height: 60px;
+    width:5px;
+    background-color: gold;
+    margin-top: 40px;
+    z-index: 1;
+    animation: time 43200s linear infinite; 
+}
+.clock_axis
+{
+    background-color: teal;
+    width: 10px;
+    height: 10px;
+    top:97px;
+    border-radius: 5px;
+     position: absolute;
+     z-index: 4;
+}
+.click_indicator
+{
+    height: 98px;
+    border-top :2px solid wheat;
+    background: none;
+}
+.click_indicator:nth-of-type(5n)
+{
+    opacity :1;
+    height: 93px;
+    border-top :7px solid wheat;
+}
+/* section:nth-of-type(1){
+    transform:rotateZ(calc(6deg*1));
+}
+section:nth-of-type(2)
+{
+     transform:rotateZ(cals(6deg*2));
+}
+section:nth-of-type(3)
+{
+    transform:rotateZ(cals(6deg *3));
+}
+section:nth-of-type(4){
+    transform:rotateZ(calc(6deg*4));
+}
+section:nth-of-type(5)
+{
+    transform:rotateZ(cals(6deg*5));
+}
+section:nth-of-type(6)
+{
+    transform:rotateZ(cals(6deg *6));
+} */
